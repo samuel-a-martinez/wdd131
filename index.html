@@ -4,27 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Samuel Martinez</title>
-    <meta description="WDD 131 - Dynamic Web Fundamentals - Samuel Martinez - A little more abut me and where i'm from">
-    <meta author="samuel-a-martinez">
+    <meta name="description" content="131 - Dynamic Web Fundamentals - Samuel Martinez - A little more abut me and where i'm from">
+    <meta name="author" content="samuel-a-martinez">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <h1>WDD 131 - Dynamic Web Fundamentals - Samuel Martinez</h1>
         <nav>
-            <a href="https://www.linkedin.com/home"></a>
-            <a href="https://byupw.instructure.com/"></a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"></a>
-            <a href="#"></a>
+            <ul>
+                <a href="https://www.linkedin.com/home">LinkedIn</a>
+                <a href="https://byupw.instructure.com/">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+                <a href="#">Final Project</a>
+            </ul>
         </nav>
     </header>
     <main>
         <section class="card">
             <h2>About Me</h2>
+            <img src="images/profile.jpg" alt="profile_pic" width="150">
+            <p>Hello World! My name is Samuel Martinez and i'm from Veracruz, México. I enjoy going to the cinema, listen to music and go to concerts, 
+                play videogames and watching anime.</p>
         </section>
         <section class="card">
             <h2>Web Dev Resources</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Dev.to Community</a>
+                        <a href="#">Smashing Magazine</a>
+                        <a href="#">CSS Tricks</a>
+                        <a href="#">Udemy</a>
+                        <a href="#">Image Placeholder</a>
+                    </li>
+            </ul>
+            </nav>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>©
+            <span id="currentyear"></span>
+            Samuel Martinez - México
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html> 
