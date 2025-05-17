@@ -1,0 +1,57 @@
+@media (min-width: 37.5em) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 20px; /* Add some horizontal padding */
+    }
+    header h1 {
+        margin: 0; /* Remove default margin for better alignment */
+    }
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+    main {
+        max-width: 1200px; /* Adjust max width as needed */
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+        gap: 20px;
+    }
+
+    main > h1 { /* Style the "Home" heading */
+        grid-column: 1 / -1; /* Make it span the entire width */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    figure {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 0;
+    }
+
+    figure img {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #eee;
+        aspect-ratio: 4/3; /* Maintain a consistent aspect ratio for the images */
+        object-fit: cover; /* Ensure images cover the container without distortion */
+    }
+
+    figcaption {
+        padding: 10px;
+        text-align: center;
+        color: #555;
+    }
+}
