@@ -54,9 +54,11 @@ nav {
 }
 #menu::before{
     content: "☰";
+    color: white;
 }
 #menu.open::before{
     content: "X";
+    color: white;
 }
 .open a {
     display: block;
