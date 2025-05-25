@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan - Place to visit</title>
+    <meta name="author" content="Samuel Martinez">
+    <meta name="description" content="The subject of the page is a country or place i wish to visit">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/places.css">
+    <script src="scripts/places.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Japan</h1>
+    </header>
+    <main class="main-content-wrapper">
+        <div class="hero-image">
+            <picture class="hero">
+            <source media="(min-width: 1024px)" srcset="images/japan_hero_desktop.webP">
+            <img src="images/Japan.webP" alt="Paisaje de Madagascar" class="hero-image-actual">
+        </picture>
+        </div>
+        <div class="data">
+            <h2 class="box-title">Data</h2>
+            <table>
+                <tr>
+                    <td class="label">Capital:</td>
+                    <td>Tokyo</td>
+                </tr>
+                <tr>
+                    <td class="label">Population:</td>
+                    <td>Aprox. 124,5 million</td>
+                </tr>
+                <tr>                        
+                    <td class="label">Language:</td>
+                    <td>Japanese</td>
+                </tr>
+                <tr>
+                    <td class="label">Currency:</td>
+                    <td>Yen</td>
+                </tr>
+                <tr>
+                    <td class="label">Time Zone:</td>
+                    <td>GMT +9</td>
+                </tr>
+                <tr>                        
+                    <td class="label">Calling Code:</td>
+                    <td>+81</td>
+                </tr>
+                <tr>
+                    <td class="label">Internet TLD:</td>
+                    <td>.jp</td>
+                </tr>
+            </table>    
+        </div>
+        <div class="weather">
+            <h2 class="box-title">Weather ⛅</h2>
+            <div class="weather-info">
+                <img src="images/weather_icon.svg" alt="Icono del clima" class="weather-icon">
+                <p>Temperature: <span id="temperature">10</span>°C</p>
+                <p>Conditions: <span id="conditions">Sunny</span></p>
+                <p>Wind: <span id="windspeed">5</span> km/h</p>
+                <p>Wind Chill: <span id="windchill"></span>°C</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>©
+            <span id="currentyear"></span>
+            Samuel Martinez - México
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
