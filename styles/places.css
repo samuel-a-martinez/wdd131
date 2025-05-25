@@ -1,3 +1,6 @@
+:root {
+    --rosybrown: #f8f9faff
+}
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +51,7 @@ header {
 }
 .hero-image {
     grid-row: 1;
-    background-color: rosybrown;
+    background-color: var(--rosybrown);
     padding-top: 20px;
 }
 .hero img{
@@ -70,7 +73,7 @@ header {
     height: auto;
 }
 header, footer {
-    background-color: rosybrown;
+    background-color: var(--rosybrown);
 }
 footer {
     color: #151515;
@@ -118,6 +121,9 @@ footer p {
         right: 2%;
         width: auto;
         height: auto;
+    }
+    .weather img::after {
+        content: "";
     }
     .weather img {
         display: none;
