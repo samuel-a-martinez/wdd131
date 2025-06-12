@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function(){
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-      templeName: "Buenos Aires Argentina Temple",
+      templeName: "Buenos Aires Argentina",
       location: "Evita, Buenos Aires, Argentina",
       dedicated: "1985, December, 17",
       area: 30659,
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function(){
       "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4087-main.jpg"
     },
     {
-      templeName: "Brussels Belgium Temple",
+      templeName: "Brussels Belgium",
       location: "Brussels, Belgium",
       dedicated: "Not dedicated yet",
       area: 25500,
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
       "https://churchofjesuschristtemples.org/assets/img/temples/brussels-belgium-temple/brussels-belgium-temple-56533-main.jpg"
     },
     {
-      templeName: "Fukuoka Japan Temple",
+      templeName: "Fukuoka Japan",
       location: "Fukuoka-shi, Fukuoka, Japan",
       dedicated: "2000, June, 11",
       area: 10700,
@@ -95,10 +95,35 @@ document.addEventListener('DOMContentLoaded', function(){
     },  
   ];
   
-  createTempleCard();
+  createTempleCard(temples);
 
-  function createTempleCard() {
-    temples.forEach(temple => {
+  const smallLink = document.querySelector("#small");
+
+  smallLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+  });
+
+  const largeLink = document.querySelector("#large");
+
+  largeLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+  });
+
+  const newLink = document.querySelector("#new");
+
+  newLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.dedicated >= "2000"));
+  });
+
+  const oldLink = document.querySelector("#old");
+
+  oldLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.dedicated <= "1900"));
+  });
+
+  function createTempleCard(filteredtemples) {
+    document.querySelector(".temple-img").innerHTML = "";
+    filteredtemples.forEach(temple => {
       let card = document.createElement("section");
       let name = document.createElement("h3");
       let location = document.createElement("p");

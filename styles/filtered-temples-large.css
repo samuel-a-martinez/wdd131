@@ -19,15 +19,30 @@
 	}
     main {
         max-width: 1200px; /* Adjust max width as needed */
+    }
+    .temple-img { 
+        display: grid;
         grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+        gap: 20px;
+        width: 100%;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: auto;
     }
     main > h2 { 
-        grid-column: 1 / -1; /* Make it span the entire width */
+        grid-column: 1 / -1; 
         text-align: center;
         margin-bottom: 20px;
+        height: 100%;
     }
-    img {
-        aspect-ratio: 4/3; /* Maintain a consistent aspect ratio for the images */
-        object-fit: cover; /* Ensure images cover the container without distortion */
+    section img {
+        border-radius: 4px;
+        margin-top: 15px;
+        object-fit: cover;
+        height: 280px;
+        align-items: end;
     }
 }
