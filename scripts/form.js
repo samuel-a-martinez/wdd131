@@ -1,7 +1,7 @@
 // Set the current year in the footer
-document.getElementById('currentYear').textContent = new Date().getFullYear()
+document.getElementById('currentyear').textContent = new Date().getFullYear()
 // Set the last modified date in the footer
-document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString()
+document.getElementById('lastmodified').textContent = new Date(document.lastModified).toLocaleString()
 const products = [
     {
         id: "fc-1888",
