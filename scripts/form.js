@@ -31,7 +31,7 @@ const products = [
 ]
 // Function to dynamically populate product name options
 function populateProductNames() {
-    const selectElement = document.getElementById('productName');
+    const selectElement = document.getElementById('productname');
     products.forEach(product => {
         const option = document.createElement('option');
         option.value = product.id; // Use product.id for the value attribute
