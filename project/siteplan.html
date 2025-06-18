@@ -1,32 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web page dedicated to the 'Canelita Store' Online store">
-    <meta name="author" content="Samuel Martinez">
-    <link rel="stylesheet" href="styles/canelita-store.css">
-    <link rel="stylesheet" href="styles/canelita-store-large.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <script src="scripts/canelita-store.js" defer></script>
     <title>Canelita Store</title>
-</head>
+    <meta name="description" content="web page dedicated to sell cosmetics and girlies stuff.">
+    <meta name="author" content="samuel martinez">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+    </head>
 <body>
-    <header>
-        <h1>Canelita Store</h1>
-        <img src="" alt="">
-        <button type="button" id="menu" aria-label="Menu"></button>
-        <nav>
-            <ul class="navigation">
-                <li><a href="siteplan.html">Home</a></li>
-                <li><a href="#" id="contact">Contact Us</a></li>
-                <li><a href="#" id="makeup">Makeup</a></li>
-                <li><a href="#" id="products">All products</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="siteplan.html">
+                    <img src="images/logo.png" alt="Logo">
+                    <h1>Canelita Store</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="navegation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
+                    <li><a href="all-products.html">All products</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+
+    <main>
+        <section class="hero-banner">
+            <div class="container">
+                <img src="images/hero-banner.png" alt="Special Offer" loading="lazy">
+                <div class="hero-text">
+                    <h2>Discover the newest discounts</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, vitae ducimus maiores libero distinctio incidunt sunt quas corrupti neque? Magnam dolorem minima doloribus quam vero, voluptates velit eveniet corporis eaque.</p>
+                    <a href="all-products.html" class="btn btn-primary">See the Offers</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers-section container">
+            <h2>Offers section</h2>
+            <div class="product-grid" id="offer-products">
+                <div class="product-card">
+                    <img src="images/imagen3.png" alt="Red Makeup" loading="lazy">
+                    <h3>Red Makeup</h3>
+                    <p class="price">$15.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/imagen4.png" alt="Special bag" loading="lazy">
+                    <h3>Special Bag</h3>
+                    <p class="price">$29.99</p>
+                </div>
+                </div>
+        </section>
+
+        <section class="categories-section container">
+            <h2>Categories</h2>
+            <div class="category-grid">
+                <a href="makeup.html" class="category-card">
+                    <img src="images/#" alt="makeup" loading="lazy">
+                    <h3>Makeup</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="images/#" alt="Skin care" loading="lazy">
+                    <h3>Skin care</h3>
+                </a>
+                <a href="#" class="category-card">
+                    <img src="images/#" alt="Accessories" loading="lazy">
+                    <h3>Accessories</h3>
+                </a>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>Our clients</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti aliquam porro commodi, provident, nemo iusto molestias quas consectetur tenetur ea saepe odio dolores debitis soluta qui repellendus placeat explicabo alias.</p>
+                        <p class="author">- Ana R.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, optio!</p>
+                        <p class="author">- Carla M.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptatibus ipsam nulla, quae reiciendis praesentium.</p>
+                        <p class="author">- Sofía L.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section about-us">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere recusandae explicabo, tenetur error amet consequuntur magni cumque.</p>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="#" aria-label="Facebook"><img src="img/icon-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" aria-label="Instagram"><img src="img/icon-instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#" aria-label="Twitter"><img src="img/icon-twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Subscribe to our newsletter</h3>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="your e-mail" aria-label="your e-mail" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Canelita Store</p>
+        </div>
+    </footer>
 </body>
 </html>
