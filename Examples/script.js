@@ -27,57 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Funcionalidad del Carrito de Compras (usando localStorage) ---
-    const cartIcon = document.getElementById('cart-icon');
-    const cartCount = document.getElementById('cart-count');
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-    let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
-
-    // Función para actualizar el contador del carrito
-    function updateCartCount() {
-        cartCount.textContent = cart.length;
-    }
-
-    // Función para añadir un producto al carrito
-    function addProductToCart(product) {
-        // Usar un método de array (some) para verificar si el producto ya está en el carrito
-        const existingProduct = cart.find(item => item.id === product.id);
-
-        if (existingProduct) {
-            // Si el producto ya existe, solo incrementa la cantidad
-            existingProduct.quantity += 1;
-            alert(`"${product.name}" ya estaba en tu carrito. Cantidad actualizada.`);
-        } else {
-            // Si es un producto nuevo, lo añade con cantidad 1
-            product.quantity = 1;
-            cart.push(product);
-            alert(`"${product.name}" ha sido añadido al carrito.`);
-        }
-        localStorage.setItem('shoppingCart', JSON.stringify(cart)); // Guarda en localStorage
-        updateCartCount(); // Actualiza el contador visual
-    }
-
-    // Escuchar clics en los botones "Añadir al Carrito"
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const productId = event.target.dataset.productId;
-            const productName = event.target.dataset.productName;
-            const productPrice = parseFloat(event.target.dataset.productPrice);
-
-            // Crear un objeto para el producto usando template literals
-            const productToAdd = {
-                id: productId,
-                name: productName,
-                price: productPrice
-            };
-            addProductToCart(productToAdd);
-        });
-    });
-
-    // Inicializar el contador del carrito al cargar la página
-    updateCartCount();
-
     // --- Ejemplo de Creación Dinámica de Contenido (más productos de oferta) ---
     const offerProductsContainer = document.getElementById('offer-products');
 
