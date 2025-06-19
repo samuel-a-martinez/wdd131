@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canelita Store</title>
+    <title>Canelita Store Contact Page</title>
     <meta name="description" content="web page dedicated to sell cosmetics and girlies stuff.">
     <meta name="author" content="samuel martinez">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -37,58 +37,56 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero-banner">
-            <div class="container">
-                <img src="images/hero-banner.png" alt="Special Offer" loading="lazy">
-                <div class="hero-text">
-                    <h2>Discover the newest discounts</h2>
-                    <p>Discover the new discounts we have for you.</p>
-                    <a href="all-products.html" class="btn btn-primary">See the Offers</a>
+    <main class="container contact-page">
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
                 </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@outlook.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Ej: 5512345678">
+                    <small>Format: 10 digits (ej. 5512345678)</small>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select One:</option>
+                        <option value="consult">General</option>
+                        <option value="order">Order</option>
+                        <option value="product">Product information</option>
+                        <option value="suggest">Suggest</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Write your message here..."></textarea>
+                    <small id="charCount"></small>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </section>
+
+        <section class="contact-info-section">
+            <h2>Contact Information</h2>
+            <div class="contact-details">
+                <p><strong>Phone Number:</strong> <a href="tel:(+52)782-107-42-03">(+52)782-107-42-03</a></p>
+                <p><strong>Business Hours:</strong> Mondays to Fridays, 9:00 AM - 9:30 PM CST</p>
             </div>
-        </section>
-
-        <section class="offers-section container">
-            <h2>Offers section</h2>
-            <div class="product-grid" id="offer-products">
-                <div class="product-card">
-                </div>
-                </div>
-        </section>
-
-        <section class="categories-section container">
-            <h2>Categories</h2>
-            <div class="category-grid">
-                <a href="all-products.html?category=makeup" class="category-card">
-                    <img src="images/eyeshadow-palette.png" alt="makeup" loading="lazy">
-                    <h3>Makeup</h3>
-                </a>
-                <a href="all-products.html?category=bags" class="category-card">
-                    <img src="images/bag1.png" alt="bags" loading="lazy">
-                    <h3>Bags</h3>
-                </a>
-                <a href="all-products.html?category=accessories" class="category-card">
-                    <img src="images/earing.png" alt="accessories" loading="lazy">
-                    <h3>Accessories</h3>
-                </a>
-            </div>
-        </section>
-
-        <section class="testimonials-section">
-            <div class="container">
-                <h2>Our clients</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>Very fashionable products at very affordable prices, and their customer service during purchase and/or delivery was super friendly.
-I highly recommend them if you're looking for a nice gift for a special occasion..</p>
-                        <p class="author">- Majo RS.</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>Innovative products at an excellent price 💖. Personalized service 😊</p>
-                        <p class="author">- Abish Rmz.</p>
-                    </div>
-                </div>
+            <div class="social-contact">
+                <h3>Follow us on social media:</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/canelita.store.pr" aria-label="Facebook"><img src="images/icons8-facebook.svg" alt="Facebook">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/canelita.store.pr/" aria-label="Instagram"><img src="images/icons8-instagram.svg" alt="Instagram">Instagram</a></li>
+                </ul>
             </div>
         </section>
     </main>
@@ -97,7 +95,7 @@ I highly recommend them if you're looking for a nice gift for a special occasion
         <div class="container footer-content">
             <div class="footer-section about-us">
                 <h3>About Us</h3>
-                <p>We are an Online Store in Poza Rica, Veracruz. We focus on all kind of stuff specially for you, we are waitnig for you..</p>
+                <p>We are an Online Store in Poza Rica, Veracruz. We focus on all kind of stuff specially for you, we are waitnig for you.</p>
             </div>
             <div class="footer-section social-media">
                 <h3>Follow us</h3>
@@ -118,5 +116,6 @@ I highly recommend them if you're looking for a nice gift for a special occasion
             <p>&copy; 2025 Canelita Store</p>
         </div>
     </footer>
+
 </body>
 </html>

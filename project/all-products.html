@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canelita Store</title>
+    <title>Canelita Store Products</title>
     <meta name="description" content="web page dedicated to sell cosmetics and girlies stuff.">
     <meta name="author" content="samuel martinez">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -37,58 +37,32 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero-banner">
-            <div class="container">
-                <img src="images/hero-banner.png" alt="Special Offer" loading="lazy">
-                <div class="hero-text">
-                    <h2>Discover the newest discounts</h2>
-                    <p>Discover the new discounts we have for you.</p>
-                    <a href="all-products.html" class="btn btn-primary">See the Offers</a>
+    <main class="container product-list-page">
+        <section class="products-section">
+            <h2>Our Products</h2>
+            <div class="filter-controls">
+                <div class="category-filter">
+                    <label for="category-select">Category Filter:</label>
+                    <select id="category-select">
+                        <option value="all">All</option>
+                        <option value="makeup">Makeup</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="bags">Bags</option>
+                    </select>
+                </div>
+                <div class="sort-filter">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="default">Default</option>
+                        <option value="price-asc">Price: Lowest to Highest</option>
+                        <option value="price-desc">Price: Highest to Lowest</option>
+                        <option value="name-asc">Name: A-Z</option>
+                        <option value="name-desc">Name: Z-A</option>
+                    </select>
                 </div>
             </div>
-        </section>
-
-        <section class="offers-section container">
-            <h2>Offers section</h2>
-            <div class="product-grid" id="offer-products">
-                <div class="product-card">
-                </div>
-                </div>
-        </section>
-
-        <section class="categories-section container">
-            <h2>Categories</h2>
-            <div class="category-grid">
-                <a href="all-products.html?category=makeup" class="category-card">
-                    <img src="images/eyeshadow-palette.png" alt="makeup" loading="lazy">
-                    <h3>Makeup</h3>
-                </a>
-                <a href="all-products.html?category=bags" class="category-card">
-                    <img src="images/bag1.png" alt="bags" loading="lazy">
-                    <h3>Bags</h3>
-                </a>
-                <a href="all-products.html?category=accessories" class="category-card">
-                    <img src="images/earing.png" alt="accessories" loading="lazy">
-                    <h3>Accessories</h3>
-                </a>
-            </div>
-        </section>
-
-        <section class="testimonials-section">
-            <div class="container">
-                <h2>Our clients</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>Very fashionable products at very affordable prices, and their customer service during purchase and/or delivery was super friendly.
-I highly recommend them if you're looking for a nice gift for a special occasion..</p>
-                        <p class="author">- Majo RS.</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>Innovative products at an excellent price 💖. Personalized service 😊</p>
-                        <p class="author">- Abish Rmz.</p>
-                    </div>
-                </div>
+            <div class="product-grid" id="products-container">
+                <p id="no-products-message" style="display: none;">No products were found with the applied filters.</p>
             </div>
         </section>
     </main>
@@ -118,5 +92,6 @@ I highly recommend them if you're looking for a nice gift for a special occasion
             <p>&copy; 2025 Canelita Store</p>
         </div>
     </footer>
+
 </body>
 </html>
